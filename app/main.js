@@ -11,9 +11,9 @@ window.onload = () => {
             this.load.image("background", `./assets/img/fondo.svg`);
             this.load.image("startButton", `./assets/img/icon.svg`);
             this.load.json(`questions`, `./assets/data/data.json`);
-            this.load.image("character", `../assets/img/character.png`);
-            this.load.image("happy", `./assets/img/happychr.png`);
-            this.load.image("bad", `./assets/img/bad.png`);
+            this.load.image(`character`, `../assets/img/character.png`);
+            this.load.image(`happy`, `./assets/img/happychr.png`);
+            this.load.image(`bad`, `./assets/img/bad.png`);
             this.load.image("optionBox", `./assets/img/bocadillo.svg`);
             this.load.image("feedbackBox", `./assets/img/feedback.svg`);
             this.load.image("paintingP1",`./assets/img/PP1.png`);
