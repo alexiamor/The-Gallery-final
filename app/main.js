@@ -11,7 +11,7 @@ window.onload = () => {
             this.load.image("background", `./assets/img/fondo.svg`);
             this.load.image("startButton", `./assets/img/icon.svg`);
             this.load.json(`questions`, `./assets/data/data.json`);
-            this.load.image(`character`, `../assets/img/character.png`);
+            this.load.image(`personaje`, `./assets/img/personaje.png`);
             this.load.image(`happy`, `./assets/img/happychr.png`);
             this.load.image(`bad`, `./assets/img/bad.png`);
             this.load.image("optionBox", `./assets/img/bocadillo.svg`);
@@ -43,8 +43,8 @@ window.onload = () => {
             .setDisplaySize(this.sys.game.canvas.width,this.sys.game.canvas.height).setDepth(500);
 
 
-            this.character = this.add
-                .image(160, 810, "character")
+            this.personaje = this.add
+                .image(160, 810, "personaje")
                 .setDepth(550)
                 .setScale(0.8);
 
@@ -78,7 +78,7 @@ window.onload = () => {
                 .setInteractive()
                 .on("pointerdown", () => this.startClick(1, this.start));
 
-            //character text
+            //personaje text
             
 
             this.startInfoBox = this.add.image(250, 495, "optionBox").setScale(1.3).setDepth(530);
@@ -169,7 +169,7 @@ window.onload = () => {
                     this.startText.text = questions[this.game.config.contadorCuadros-1].reply_right;
                     
                     this.next.setInteractive().setDepth(700);
-                    this.character.setDepth(0);
+                    this.personaje.setDepth(0);
                     this.happy.setDepth(550);
                     this.bad.setDepth(0);
 
@@ -180,7 +180,7 @@ window.onload = () => {
                 }else{
                     this.startText.text = questions[this.game.config.contadorCuadros-1].reply_wrong;
                     this.perder.setInteractive().setDepth(700);
-                    this.character.setDepth(0);
+                    this.personaje.setDepth(0);
                     this.happy.setDepth(0);
                     this.bad.setDepth(550);
 
